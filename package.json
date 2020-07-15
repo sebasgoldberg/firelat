@@ -11,5 +11,19 @@
   },
   "scripts": {
     "start": "npx cds run"
+  },
+  "cds": {
+    "requires": {
+      "YY1_BALANCE_A2P_API_CDS": {
+        "kind": "odata",
+        "model": "srv/external/YY1_BALANCE_A2P_API_CDS",
+        "credentials": {
+            "destination": "s4hc"
+        }
+      },
+      "db": {
+        "kind": "sql"
+      }
+    }
   }
 }

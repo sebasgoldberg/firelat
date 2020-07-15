@@ -1,0 +1,13 @@
+###
+POST http://127.0.0.1:4004/fi-relat/Diario
+Content-Type: application/json
+
+{
+    "ano_de": 2020,
+    "periodo_de": 6,
+    "ano_ate": 2020,
+    "periodo_ate": 7
+}
+
+###
+GET http://127.0.0.1:4004/fi-relat/Diario

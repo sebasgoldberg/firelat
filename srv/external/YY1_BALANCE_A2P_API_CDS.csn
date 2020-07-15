@@ -1,0 +1,151 @@
+{
+  "definitions": {
+    "YY1_BALANCE_A2P_API_CDS": {
+      "kind": "service"
+    },
+    "YY1_BALANCE_A2P_API_CDS.YY1_Balance_A2P_APIResults": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ID": {
+          "key": true,
+          "type": "cds.LargeString"
+        },
+        "Ledger": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "CompanyCode": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "FiscalYear": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "SourceLedger": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "AccountingDocument": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "LedgerGLLineItem": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "GLAccountFlowType": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "FiscalPeriodDate": {
+          "type": "cds.String",
+          "length": 11
+        },
+        "GLAccount": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "DebitAmountInCoCodeCrcy": {
+          "type": "cds.Decimal",
+          "precision": 24,
+          "scale": 3
+        },
+        "CreditAmountInCoCodeCrcy": {
+          "type": "cds.Decimal",
+          "precision": 24,
+          "scale": 3
+        },
+        "EndingBalanceAmtInCoCodeCrcy": {
+          "type": "cds.Decimal",
+          "precision": 24,
+          "scale": 3
+        },
+        "CompanyCodeCurrency": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "ChartOfAccounts": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "CompanyCodeName": {
+          "type": "cds.String",
+          "length": 25
+        },
+        "YY1_AccountFachesf_JEI": {
+          "type": "cds.String",
+          "length": 12
+        },
+        "YY1_DescAccountFachesf_JEI": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "PostingDate": {
+          "type": "cds.Date"
+        },
+        "ReferenceDocument": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ReferenceDocumentItem": {
+          "type": "cds.String",
+          "length": 6
+        },
+        "DocumentItemText": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "Segment": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "CostCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProfitCenter": {
+          "type": "cds.String",
+          "length": 10
+        },
+        "DocumentDate": {
+          "type": "cds.Date"
+        },
+        "ControllingArea": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "DebitCreditCode": {
+          "type": "cds.String",
+          "length": 1
+        },
+        "Parameters": {
+          "type": "cds.Association",
+          "target": "YY1_BALANCE_A2P_API_CDS.YY1_Balance_A2P_API"
+        }
+      }
+    },
+    "YY1_BALANCE_A2P_API_CDS.YY1_Balance_A2P_API": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "P_FromPostingDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "P_ToPostingDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "Results": {
+          "type": "cds.Association",
+          "target": "YY1_BALANCE_A2P_API_CDS.YY1_Balance_A2P_APIResults",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    }
+  }
+}
