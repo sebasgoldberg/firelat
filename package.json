@@ -7,7 +7,8 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^3",
-    "express": "^4"
+    "express": "^4",
+    "pdfkit": "^0.11.0"
   },
   "scripts": {
     "start": "npx cds run"
@@ -18,7 +19,7 @@
         "kind": "odata",
         "model": "srv/external/YY1_BALANCE_A2P_API_CDS",
         "credentials": {
-            "destination": "s4hc"
+          "destination": "s4hc"
         }
       },
       "db": {
