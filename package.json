@@ -19,7 +19,8 @@
         "kind": "odata",
         "model": "srv/external/YY1_BALANCE_A2P_API_CDS",
         "credentials": {
-          "destination": "s4hc"
+          "destination": "s4hc",
+          "requestTimeout": 900000
         }
       },
       "db": {
